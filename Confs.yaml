@@ -11,7 +11,6 @@ secret: "aliez"
 bind-address: "*"
 unified-delay: true
 external-ui: "/usr/share/openclash/ui"
-external-ui-url: "https://github.com/Zephyruso/zashboard/archive/gh-pages.zip"
 profile:
   store-selected: true
 dns:
