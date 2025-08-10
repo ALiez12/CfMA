@@ -15,7 +15,6 @@ external-ui: "/usr/share/openclash/ui"
 experimental:
   udp: true
 
-# Optional TUN mode (disable jika tidak dibutuhkan)
 tun:
   enable: true
   stack: system
@@ -26,7 +25,6 @@ tun:
   dns-hijack:
   - tcp://any:53
 
-# ========== DNS CONFIG ========== #
 dns:
   enable: true
   listen: 0.0.0.0:7874
@@ -50,7 +48,6 @@ dns:
     ipcidr:
       - 240.0.0.0/4
   fake-ip-filter:
-    # Local dan internal
     - "*.lan"
     - "localhost"
     - "*.local"
@@ -58,14 +55,12 @@ dns:
     - "*.example"
     - "*.invalid"
     - "*.test"
-    # NTP / sinkronisasi waktu
     - "time.*.com"
     - "time.*.gov"
     - "ntp.*.com"
     - "ntp.*.org"
     - "pool.ntp.org"
     - "*.ntp.org"    
-    # DNS dan sistem penting
     - "dns.google"
     - "dns.cloudflare.com"
     - "resolver1.opendns.com"
@@ -76,12 +71,10 @@ dns:
     - "*.icloud.com"
     - "*.msftconnecttest.com"
     - "*.msftncsi.com"    
-    # VPN dan proxy detection (opsional)
     - "*.openvpn.net"
     - "*.nordvpn.com"
     - "*.expressvpn.com"
     - "*.surfshark.com"   
-    # Update sistem dan antivirus
     - "update.microsoft.com"
     - "windowsupdate.microsoft.com"
     - "download.windowsupdate.com"
@@ -198,7 +191,6 @@ rule-providers:
     behavior: classical
     path: "./gameumum.yaml"
 
-# === Rules ===
 rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,Direct,DIRECT
