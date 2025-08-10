@@ -12,31 +12,42 @@ bind-address: "*"
 unified-delay: true
 external-ui: "/usr/share/openclash/ui"
 
-experimental: 
+experimental:
   udp: true
 
-tun: 
+tun:
   enable: true
   stack: system
   device: utun
   mtu: 65535
   auto-route: false
   auto-detect-interface: false
-  dns-hijack: 
+  dns-hijack:
   - tcp://any:53
-dns: 
+
+dns:
   enable: true
   listen: 0.0.0.0:7874
   ipv6: false
   enhanced-mode: fake-ip
-  nameserver: {8.8.8.8,8.8.4.4}
-  proxy-server-nameserver: {112.215.203.246,112.215.203.247,112.215.203.248,112.215.203.254,112.215.198.248,112.215.198.254}
-  fallback: {1.1.1.11.0.0.1}
-  fallback-filter: 
+  nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+  proxy-server-nameserver:
+    - 112.215.203.246
+    - 112.215.203.247
+    - 112.215.203.248
+    - 112.215.203.254
+    - 112.215.198.248
+    - 112.215.198.254
+  fallback:
+    - 1.1.1.1
+    - 1.0.0.1
+  fallback-filter:
     geoip: true
-    ipcidr: 
+    ipcidr:
       - 240.0.0.0/4
-  fake-ip-filter: 
+  fake-ip-filter:
     - "*.lan"
     - "localhost"
     - "*.local"
@@ -71,7 +82,7 @@ dns:
     - "*.avast.com"
     - "*.kaspersky.com"
 
-proxies: 
+proxies:
   - name: 🇲🇨×Rozzz-IpTun
     server: quiz.int.vidio.com
     port: 443
@@ -85,7 +96,7 @@ proxies:
     network: ws
     ws-opts:
       path: /xl-kntl/buy-vmess-ws-pm-telegram-at-synricha
-      headers: 
+      headers:
         Host: quiz.int.vidio.com.ikada.sing-box.space
     udp: true
   - name: 🇲🇨×ALiez-[2]Amazon
@@ -100,7 +111,7 @@ proxies:
     network: ws
     ws-opts:
       path: /43.218.77.16-443
-      headers: 
+      headers:
         Host: aliez.flavonoid12.workers.dev
     udp: true
   - name: 🇸🇬×ALiez-[29]Zappie
@@ -113,26 +124,26 @@ proxies:
     skip-cert-verify: true
     servername: aliez.flavonoid12.workers.dev
     network: ws
-    ws-opts: 
+    ws-opts:
       path: /83.142.30.5-2096
-      headers: 
+      headers:
         Host: aliez.flavonoid12.workers.dev
     udp: true
 
-proxy-groups: 
+proxy-groups:
   - name: "🕹️Proxies"
     type: select 
     url: 'http://www.gstatic.com/generate_204'
     disable-udp: false
     interval: 300
-    proxies: 
+    proxies:
       - 🇲🇨×Rozzz-IpTun
       - 🇲🇨×ALiez-[2]Amazon
       - 🇸🇬×ALiez-[29]Zappie
 
   - name: "⛔AdBlock"
     type: select
-    proxies: 
+    proxies:
       - REJECT
       - 🇲🇨×Rozzz-IpTun
       - 🇲🇨×ALiez-[2]Amazon
@@ -140,47 +151,47 @@ proxy-groups:
 
   - name: "🎮Gaming🎮"
     type: select
-    proxies: 
+    proxies:
       - DIRECT
       - 🕹️Proxies
 
   - name: "☢️Add-On Unlimited☢️"
     type: select
-    proxies: 
+    proxies:
       - DIRECT
       - 🕹️Proxies
 
-rule-providers: 
-  Direct: 
+rule-providers:
+  Direct:
     type: file
     behavior: classical
     path: "./direct.yaml"
-  Reject: 
+  Reject:
     type: file
     behavior: classical
     path: "./reject.yaml"
-  18+: 
+  18+:
     type: file
     behavior: domain
     path: "./18+.yaml"
-  Ads: 
+  Ads:
     type: file
     behavior: classical
     path: "./adblock.yaml"
-  Addon: 
+  Addon:
     type: file
     behavior: classical
     path: "./addon.yaml"
-  Pubg: 
+  Pubg:
     type: file
     behavior: classical
     path: "./pubgmobile.yaml"
-  GameUmum: 
+  GameUmum:
     type: file
     behavior: classical
     path: "./gameumum.yaml"
 
-rules: 
+rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Reject,REJECT
