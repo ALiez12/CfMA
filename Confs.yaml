@@ -24,15 +24,12 @@ tun:
   auto-detect-interface: false
   dns-hijack:
   - tcp://any:53
-
 dns:
   enable: true
   listen: 0.0.0.0:7874
   ipv6: false
   enhanced-mode: fake-ip
-  nameserver:
-    - 8.8.8.8
-    - 8.8.4.4
+  nameserver: {8.8.8.8,8.8.4.4}
   proxy-server-nameserver:
     - 112.215.203.246
     - 112.215.203.247
