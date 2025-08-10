@@ -196,7 +196,7 @@ rules:
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
 - RULE-SET,Direct,DIRECT
 - RULE-SET,Reject,REJECT
-- RULE-SET,18+,⛔AdBlock
+- RULE-SET,18+,🕹️Proxies
 - RULE-SET,Ads,⛔AdBlock
 - RULE-SET,Pubg,🎮Gaming🎮
 - RULE-SET,GameUmum,🎮Gaming🎮
