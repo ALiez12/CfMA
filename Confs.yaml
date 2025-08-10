@@ -11,7 +11,17 @@ secret: "aliez"
 bind-address: "*"
 unified-delay: true
 external-ui: "/usr/share/openclash/ui"
-
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    
 experimental:
   udp: true
 
@@ -24,15 +34,6 @@ tun:
   auto-detect-interface: false
   dns-hijack:
   - tcp://any:53
-
-dns:
-  enable: true
-  listen: 0.0.0.0:7874
-  ipv6: false
-  enhanced-mode: fake-ip
-  nameserver:
-    - 8.8.8.8
-    - 8.8.4.4
   proxy-server-nameserver:
     - 112.215.203.246
     - 112.215.203.247
