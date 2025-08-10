@@ -11,6 +11,7 @@ secret: "aliez"
 bind-address: "*"
 unified-delay: true
 external-ui: "/usr/share/openclash/ui"
+external-ui-url: "wget --method=POST --header="Authorization: Bearer 123456" -O /dev/null http://127.0.0.1:9090/upgrade/ui"
 profile:
   store-selected: true
 dns:
