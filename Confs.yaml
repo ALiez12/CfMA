@@ -7,7 +7,7 @@ mode: rule
 log-level: info
 
 external-controller: 0.0.0.0:9090
-secret: "aliez"
+secret: ""
 bind-address: "*"
 unified-delay: true
 external-ui: "/usr/share/openclash/ui"
