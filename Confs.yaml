@@ -156,6 +156,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🕹️Proxies
+      - 🇲🇨×Rozzz-IpTun
 
   - name: "☢️Add-On Unlimited☢️"
     type: select
