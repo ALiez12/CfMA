@@ -109,12 +109,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: roz.viviola.my.id.aliez.flavonoid12.workers.dev
+    servername: roz.viviola.my.id
     network: ws
     ws-opts:
       path: /43.218.77.16-443
       headers:
-        Host: roz.viviola.my.id.aliez.flavonoid12.workers.dev
+        Host: roz.viviola.my.id
     udp: true
   - name: 🇸🇬×ALiez-[29]Zappie
     server: quiz.int.vidio.com
@@ -124,12 +124,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: aliez.flavonoid12.workers.dev
+    servername: aliez.viviola.my.id
     network: ws
     ws-opts:
       path: /83.142.30.5-2096
       headers:
-        Host: aliez.flavonoid12.workers.dev
+        Host: roz.viviola.my.id
     udp: true
 
 proxy-groups:
