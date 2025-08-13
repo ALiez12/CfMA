@@ -102,19 +102,19 @@ proxies:
         Host: quiz.int.vidio.com.ikada.sing-box.space
     udp: true
   - name: 🇲🇨×ALiez-[2]Amazon
-    server: quiz.int.vidio.com
+    server: roz.viviola.my.id
     port: 443
     type: vless
     uuid: 80488566-30eb-4b57-8d41-5e7835a19a4b
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: quiz.int.vidio.com.aliez.flavonoid12.workers.dev
+    servername: aliez.flavonoid12.workers.dev
     network: ws
     ws-opts:
-      path: /kntl/43.218.77.16-443
+      path: /43.218.77.16-443
       headers:
-        Host: quiz.int.vidio.com.aliez.flavonoid12.workers.dev
+        Host: aliez.flavonoid12.workers.dev
     udp: true
   - name: 🇸🇬×ALiez-[29]Zappie
     server: roz.viviola.my.id
