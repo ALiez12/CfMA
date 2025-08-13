@@ -94,12 +94,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: quiz.int.vidio.com.ikada.sing-box.space
+    servername: roz.viviola.my.id.ikada.sing-box.space
     network: ws
     ws-opts:
       path: /xl-kntl/buy-vmess-ws-pm-telegram-at-synricha
       headers:
-        Host: quiz.int.vidio.com.ikada.sing-box.space
+        Host: roz.viviola.my.id.ikada.sing-box.space
     udp: true
   - name: 🇲🇨×ALiez-[2]Amazon
     server: roz.viviola.my.id
