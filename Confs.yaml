@@ -109,12 +109,12 @@ proxies:
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: aliez.flavonoid12.workers.dev
+    servername: roz.viviola.my.id.aliez.flavonoid12.workers.dev
     network: ws
     ws-opts:
       path: /43.218.77.16-443
       headers:
-        Host: aliez.flavonoid12.workers.dev
+        Host: roz.viviola.my.id.aliez.flavonoid12.workers.dev
     udp: true
   - name: 🇸🇬×ALiez-[29]Zappie
     server: roz.viviola.my.id
