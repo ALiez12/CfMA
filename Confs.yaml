@@ -102,7 +102,7 @@ proxies:
         Host: quiz.int.vidio.com.ikada.sing-box.space
     udp: true
   - name: 🇲🇨×ALiez-[2]Amazon
-    server: roz.viviola.my.id.quiz.int.vidio.com
+    server: roz.viviola.my.id
     port: 443
     type: vless
     uuid: 80488566-30eb-4b57-8d41-5e7835a19a4b
