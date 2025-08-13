@@ -86,7 +86,7 @@ tun:
 
 proxies:
   - name: 🇲🇨×Rozzz-IpTun
-    server: roz.viviola.my.id
+    server: quiz.int.vidio.com
     port: 443
     type: vmess
     uuid: af6f15c5-8267-45ee-b686-cc2677fa775a
@@ -102,19 +102,19 @@ proxies:
         Host: quiz.int.vidio.com.ikada.sing-box.space
     udp: true
   - name: 🇲🇨×ALiez-[2]Amazon
-    server: roz.viviola.my.id
+    server: quiz.int.vidio.com
     port: 443
     type: vless
     uuid: 80488566-30eb-4b57-8d41-5e7835a19a4b
     cipher: auto
     tls: true
     skip-cert-verify: true
-    servername: aliez.flavonoid12.workers.dev
+    servername: quiz.int.vidio.com.aliez.flavonoid12.workers.dev
     network: ws
     ws-opts:
-      path: /43.218.77.16-443
+      path: /kntl/43.218.77.16-443
       headers:
-        Host: aliez.flavonoid12.workers.dev
+        Host: quiz.int.vidio.com.aliez.flavonoid12.workers.dev
     udp: true
   - name: 🇸🇬×ALiez-[29]Zappie
     server: roz.viviola.my.id
