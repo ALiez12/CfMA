@@ -86,7 +86,7 @@ tun:
 
 proxies:
   - name: VMess-WS-TLS-443-backupATP
-    server: roz.viviola.my.id
+    server: quiz.int.vidio.com
     port: 443
     type: vmess
     uuid: b59c47ed-e158-48fe-8200-012abf4bcadb
