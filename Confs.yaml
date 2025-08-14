@@ -1,0 +1,222 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+allow-lan: true
+mode: rule
+log-level: info
+
+external-controller: 0.0.0.0:9090
+secret: ""
+bind-address: "*"
+unified-delay: true
+external-ui: "/etc/mihomo/ui"
+external-ui-url: "https://github.com/Zephyruso/zashboard/archive/gh-pages.zip"
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7874
+  nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    
+experimental:
+  udp: true
+
+tun:
+  enable: true
+  stack: system
+  device: utun
+  mtu: 65535
+  auto-route: false
+  auto-detect-interface: false
+  dns-hijack:
+  - tcp://any:53
+  proxy-server-nameserver:
+    - 112.215.203.246
+    - 112.215.203.247
+    - 112.215.203.248
+    - 112.215.203.254
+    - 112.215.198.248
+    - 112.215.198.254
+  fallback:
+    - 1.1.1.1
+    - 1.0.0.1
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+  fake-ip-filter:
+    - "*.lan"
+    - "localhost"
+    - "*.local"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.test"
+    - "time.*.com"
+    - "time.*.gov"
+    - "ntp.*.com"
+    - "ntp.*.org"
+    - "pool.ntp.org"
+    - "*.ntp.org"    
+    - "dns.google"
+    - "dns.cloudflare.com"
+    - "resolver1.opendns.com"
+    - "doh.opendns.com"
+    - "*.microsoft.com"
+    - "*.windows.com"
+    - "*.apple.com"
+    - "*.icloud.com"
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"    
+    - "*.openvpn.net"
+    - "*.nordvpn.com"
+    - "*.expressvpn.com"
+    - "*.surfshark.com"   
+    - "update.microsoft.com"
+    - "windowsupdate.microsoft.com"
+    - "download.windowsupdate.com"
+    - "*.symantec.com"
+    - "*.avast.com"
+    - "*.kaspersky.com"
+
+proxies:
+  - name: VMess-WS-TLS-443-backupATP
+    server: roz.viviola.my.id
+    port: 443
+    type: vmess
+    uuid: b59c47ed-e158-48fe-8200-012abf4bcadb
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: speed.sing-box.space
+    network: ws
+    ws-opts:
+      path: /proven-explore-to-api-design/buy-vmess-ws-pm-telegram-at-synricha
+      headers:
+        Host: speed.sing-box.space
+    udp: true
+  - name: 🇲🇨×Rozzz-IpTun
+    server: quiz.int.vidio.com
+    port: 443
+    type: vmess
+    uuid: af6f15c5-8267-45ee-b686-cc2677fa775a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: quiz.int.vidio.com.ikada.sing-box.space
+    network: ws
+    ws-opts:
+      path: /xl-kntl/buy-vmess-ws-pm-telegram-at-synricha
+      headers:
+        Host: quiz.int.vidio.com.ikada.sing-box.space
+    udp: true
+  - name: 🇲🇨×ALiez-[2]Amazon
+    server: roz.viviola.my.id
+    port: 443
+    type: vless
+    uuid: 80488566-30eb-4b57-8d41-5e7835a19a4b
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: aliez.flavonoid12.workers.dev
+    network: ws
+    ws-opts:
+      path: /43.218.77.16-443
+      headers:
+        Host: aliez.flavonoid12.workers.dev
+    udp: true
+  - name: 🇸🇬×ALiez-[29]Zappie
+    server: roz.viviola.my.id
+    port: 443
+    type: vless
+    uuid: 602e743b-28f2-45f4-b21d-44e492b6d2a1
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: aliez.flavonoid12.workers.dev
+    network: ws
+    ws-opts:
+      path: /83.142.30.5-2096
+      headers:
+        Host: aliez.flavonoid12.workers.dev
+    udp: true
+
+proxy-groups:
+  - name: "🕹️Proxies"
+    type: select 
+    url: 'http://www.gstatic.com/generate_204'
+    disable-udp: false
+    interval: 300
+    proxies:
+      - 🇲🇨×Rozzz-IpTun
+      - 🇲🇨×ALiez-[2]Amazon
+      - 🇸🇬×ALiez-[29]Zappie
+
+  - name: "⛔AdBlock"
+    type: select
+    proxies:
+      - REJECT
+      - 🇲🇨×Rozzz-IpTun
+      - 🇲🇨×ALiez-[2]Amazon
+      - 🇸🇬×ALiez-[29]Zappie
+
+  - name: "🎮Gaming🎮"
+    type: select
+    proxies:
+      - DIRECT
+      - 🕹️Proxies
+      - 🇲🇨×Rozzz-IpTun
+
+  - name: "☢️Add-On Unlimited☢️"
+    type: select
+    proxies:
+      - DIRECT
+      - 🕹️Proxies
+
+rule-providers:
+  Direct:
+    type: file
+    behavior: classical
+    path: "./direct.yaml"
+  Reject:
+    type: file
+    behavior: classical
+    path: "./reject.yaml"
+  18+:
+    type: file
+    behavior: domain
+    path: "./18+.yaml"
+  Ads:
+    type: file
+    behavior: classical
+    path: "./adblock.yaml"
+  Addon:
+    type: file
+    behavior: classical
+    path: "./addon.yaml"
+  Pubg:
+    type: file
+    behavior: classical
+    path: "./pubgmobile.yaml"
+  GameUmum:
+    type: file
+    behavior: classical
+    path: "./gameumum.yaml"
+
+rules:
+- IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+- RULE-SET,Direct,DIRECT
+- RULE-SET,Reject,REJECT
+- RULE-SET,18+,🕹️Proxies
+- RULE-SET,Ads,⛔AdBlock
+- RULE-SET,Pubg,🎮Gaming🎮
+- RULE-SET,GameUmum,🎮Gaming🎮
+- RULE-SET,Addon,☢️Add-On Unlimited☢️
+- MATCH,🕹️Proxies
