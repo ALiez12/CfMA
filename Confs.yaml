@@ -5,7 +5,7 @@ tproxy-port: 7893
 allow-lan: true
 mode: rule
 log-level: info
-ap_list=("wlan+","softap+","swlan+","ap+","rndis+")
+
 external-controller: 0.0.0.0:9090
 secret: ""
 bind-address: "*"
