@@ -6,6 +6,9 @@ allow-lan: true
 mode: rule
 log-level: info
 
+ap_list=("wlan+","softap+","swlan+","ap+","rndis+")
+ignore_out_list=()
+
 external-controller: 0.0.0.0:9090
 secret: ""
 bind-address: "*"
