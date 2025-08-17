@@ -147,6 +147,22 @@ proxies:
       headers:
         Host: aliez.flavonoid12.workers.dev
     udp: true
+  - name: FoolVPN-UDP
+    server: 104.18.2.2
+    port: 80
+    type: vmess
+    uuid: 1760dc4d-4ed4-4b97-8236-a3f55c8b7e8b
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sg1.foolvpn.me
+    network: ws
+    ws-opts:
+      path: /vmess-udp
+      headers:
+        Host: sg1.foolvpn.me
+    udp: true
 
 proxy-groups:
   - name: "🕹️Proxies"
